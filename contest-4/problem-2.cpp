@@ -64,8 +64,6 @@ public:
     }
 };
 
-//
-// insert at tail
 void insert_at_tail(Node *&head, Node *&tail, int val)
 {
     Node *newNode = new Node(val);
@@ -77,6 +75,46 @@ void insert_at_tail(Node *&head, Node *&tail, int val)
     }
     tail->next = newNode;
     tail = newNode;
+}
+
+int count_node(Node *head)
+{
+    int count = 0;
+    Node *temp = head;
+
+    while (temp != NULL)
+    {
+        count++;
+        temp = temp->next;
+    }
+
+    return count;
+}
+
+void find_and_print_index(Node *head, int value)
+{
+    Node *temp = head;
+    int find_index = 0;
+
+    int total_node = count_node(head);
+
+    while (temp != NULL)
+    {
+        if (temp->val == value)
+        {
+            break;
+        }
+        find_index++;
+        temp = temp->next;
+    }
+    if (total_node == find_index)
+    {
+        cout << -1;
+    }
+    else
+    {
+        cout << find_index;
+    }
 }
 
 int main()
@@ -95,9 +133,14 @@ int main()
             {
                 break;
             }
+            insert_at_tail(head, tail, val);
         }
 
-        insert_at_tail(head, tail, val);
+        int find_val;
+        cin >> find_val;
+
+        find_and_print_index(head, find_val);
+        cout << endl;
     }
     return 0;
 }
