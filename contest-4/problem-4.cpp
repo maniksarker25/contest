@@ -52,7 +52,7 @@ public:
         this->next = NULL;
     }
 };
-
+// insert at head
 void insert_at_head(Node *&head, Node *&tail, int val)
 {
     Node *newNode = new Node(val);
