@@ -16,6 +16,7 @@ public:
     }
 };
 
+// tree input
 Node * input_tree(){
     int val;
     cin >> val;
