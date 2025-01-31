@@ -1,5 +1,2 @@
-Invalid
-Invalid
-Invalid
-SongA 
-EMPTY
+18
+20
