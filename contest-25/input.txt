@@ -1,12 +1,7 @@
+3
 2
-6 4
-annncc
-c
-c
-c
-d
-9 3
-ananymous
-r
-r
-r
+1 2
+3
+3 1 2
+4
+2 3 4 1
